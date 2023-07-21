@@ -20,5 +20,11 @@ namespace PierresBakery.Models
             Id = _vendorsList.Count;
             OrderList = new List<Orders> { };
         }
+
+        public static List<Vendors> GetAll()
+        {
+            return _vendorsList;
+        }
+
     }
 }

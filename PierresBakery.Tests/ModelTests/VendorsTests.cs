@@ -32,6 +32,10 @@ namespace PierresBakery.Tests
             Vendors newVendor1 = new Vendors("IslandBages", "Bagel shop");
             Vendors newVendor2 = new Vendors("vendorName", "vendorDescription");
             List<Vendors> newVendorList = new List<Vendors> { newVendor1, newVendor2 };
+
+            List<Vendors> result = Vendors.GetAll();
+
+            CollectionAssert.AreEqual(newVendorList, result);
         }
     }
 }
