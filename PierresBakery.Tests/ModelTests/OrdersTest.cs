@@ -1,16 +1,24 @@
-// using Microsoft.VisualStudio.TestTools.UnitTesting;
-// using PierresBakery.Models;
-// using System.Collections.Generic;
-// using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using PierresBakery.Models;
+using System.Collections.Generic;
+using System;
 
-// namespace PierresBakery.Tests
-// {
-//     [TestClass]
+namespace PierresBakery.Tests
+{
+    [TestClass]
 
-//     public class OrdersTest
-//     {
+    public class OrdersTest
+    {
 
-//         [TestMethod]
+        [TestMethod]
+        public void OrdersConstructor_CreatesOrders_Orders()
+        {
+            decimal orderPrice = 12.99m;
+            Orders newOrders = new Orders("orderTitle", "orderDescription", orderPrice);
+            Assert.AreEqual(typeof(Orders), newOrders.GetType());
+        }
 
-//     }
-// }
+    }
+}
+
+//public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()

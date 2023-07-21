@@ -5,6 +5,8 @@ namespace PierresBakery.Models
 {
     public class Orders
     {
-
+        public Orders(string orderTitle, string orderDescription, decimal orderPrice){
+            
+        }
     }
 }
