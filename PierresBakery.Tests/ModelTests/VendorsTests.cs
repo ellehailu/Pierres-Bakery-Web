@@ -41,6 +41,17 @@ namespace PierresBakery.Tests
 
             CollectionAssert.AreEqual(newVendorList, result);
         }
+
+        [TestMethod]
+        public void Find_ReturnsCorrectVendor_Vendor()
+        {
+            Vendors newVendor1 = new Vendors("IslandBages", "Bagel shop");
+            Vendors newVendor2 = new Vendors("vendorName", "vendorDescription");
+
+            Vendors result = Vendors.Find(1);
+
+            Assert.AreEqual(newVendor1, result);
+        }
     }
 }
 //public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()

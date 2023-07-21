@@ -31,5 +31,10 @@ namespace PierresBakery.Models
             _vendorsList.Clear();
         }
 
+        public static Vendors Find(int searchId)
+        {
+            return _vendorsList[searchId - 1];
+        }
+
     }
 }
