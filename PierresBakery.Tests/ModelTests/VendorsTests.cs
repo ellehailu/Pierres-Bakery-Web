@@ -25,6 +25,14 @@ namespace PierresBakery.Tests
             int actualId = newVendor.Id;
             Assert.AreEqual(2, actualId);
         }
+
+        [TestMethod]
+        public void GetAll_ReturnsAllVendorObjects_VendorList()
+        {
+            Vendors newVendor1 = new Vendors("IslandBages", "Bagel shop");
+            Vendors newVendor2 = new Vendors("vendorName", "vendorDescription");
+            List<Vendors> newVendorList = new List<Vendors> { newVendor1, newVendor2 };
+        }
     }
 }
 //public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
