@@ -16,6 +16,7 @@ namespace PierresBakery.Models
         {
             VendorName = vendorName;
             VendorDescription = vendorDescription;
+            _vendorsList.Add(this);
             Id = _vendorsList.Count;
             OrderList = new List<Orders> { };
         }

@@ -16,7 +16,14 @@ namespace PierresBakery.Tests
 
             Vendors newVendor = new Vendors("vendorName", "vendorDescription");
             Assert.AreEqual(typeof(Vendors), newVendor.GetType());
+        }
 
+        [TestMethod]
+        public void GetId_ReturnsVendorsId_Int()
+        {
+            Vendors newVendor = new Vendors("IslandBages", "Bagel shop");
+            int actualId = newVendor.Id;
+            Assert.AreEqual(2, actualId);
         }
     }
 }
