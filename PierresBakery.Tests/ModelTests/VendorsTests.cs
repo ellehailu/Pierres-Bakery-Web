@@ -7,10 +7,17 @@ namespace PierresBakery.Tests
 {
     [TestClass]
 
-    public class Vendors
+    public class VendorsTest
     {
 
         [TestMethod]
+        public void VendorsConstructor_CreatesVendorObject_Vendor()
+        {
 
+            Vendors newVendor = new Vendors("vendorName", "vendorDescription");
+            Assert.AreEqual(typeof(Vendors), newVendor.GetType());
+
+        }
     }
 }
+//public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
