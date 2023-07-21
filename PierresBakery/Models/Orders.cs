@@ -7,8 +7,12 @@ namespace PierresBakery.Models
     {
         public string OrderTitle { get; set; }
         public string OrderDescription { get; set; }
-        public decimal OrderList { get; set; }
+        public decimal OrderPrice { get; set; }
         public string OrderDate { get; set; }
+
+        public int Id { get; }
+
+        private static List<Orders> _ordersList = new List<Orders> { };
 
         public Orders(string orderTitle, string orderDescription, decimal orderPrice, string orderDate)
         {
@@ -16,6 +20,8 @@ namespace PierresBakery.Models
             OrderDescription = orderDescription;
             OrderPrice = orderPrice;
             OrderDate = orderDate;
+            _ordersList.Add(this);
+            Id = _ordersList.Count;
         }
     }
 }

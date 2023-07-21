@@ -14,10 +14,9 @@ namespace PierresBakery.Tests
         public void OrdersConstructor_CreatesOrders_Orders()
         {
             decimal orderPrice = 12.99m;
-            Orders newOrders = new Orders("orderTitle", "orderDescription", orderPrice);
+            Orders newOrders = new Orders("orderTitle", "orderDescription", orderPrice, "07/21/2023");
             Assert.AreEqual(typeof(Orders), newOrders.GetType());
         }
-
     }
 }
 
