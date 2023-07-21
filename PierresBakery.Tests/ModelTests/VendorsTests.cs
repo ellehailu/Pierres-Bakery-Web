@@ -7,8 +7,12 @@ namespace PierresBakery.Tests
 {
     [TestClass]
 
-    public class VendorsTest
+    public class VendorsTest : IDisposable
     {
+        public void Dispose()
+        {
+            Vendors.ClearAll();
+        }
 
         [TestMethod]
         public void VendorsConstructor_CreatesVendorObject_Vendor()
@@ -23,7 +27,7 @@ namespace PierresBakery.Tests
         {
             Vendors newVendor = new Vendors("IslandBages", "Bagel shop");
             int actualId = newVendor.Id;
-            Assert.AreEqual(2, actualId);
+            Assert.AreEqual(1, actualId);
         }
 
         [TestMethod]
