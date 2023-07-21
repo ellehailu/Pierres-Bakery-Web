@@ -7,15 +7,15 @@ namespace PierresBakery.Tests
 {
     [TestClass]
 
-    public class OrdersTest
+    public class OrderTest
     {
 
         [TestMethod]
-        public void OrdersConstructor_CreatesOrders_Orders()
+        public void OrderConstructor_CreatesOrders_Order()
         {
             decimal orderPrice = 12.99m;
-            Orders newOrders = new Orders("orderTitle", "orderDescription", orderPrice, "07/21/2023");
-            Assert.AreEqual(typeof(Orders), newOrders.GetType());
+            Order newOrder = new Order("orderTitle", "orderDescription", orderPrice, "07/21/2023");
+            Assert.AreEqual(typeof(Order), newOrder.GetType());
         }
     }
 }

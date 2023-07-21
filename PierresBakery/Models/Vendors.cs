@@ -10,7 +10,7 @@ namespace PierresBakery.Models
         public string VendorName { get; set; }
         public string VendorDescription { get; set; }
         public int Id { get; }
-        public List<Orders> OrderList { get; set; }
+        public List<Order> OrderList { get; set; }
 
         public Vendors(string vendorName, string vendorDescription)
         {
@@ -18,7 +18,7 @@ namespace PierresBakery.Models
             VendorDescription = vendorDescription;
             _vendorsList.Add(this);
             Id = _vendorsList.Count;
-            OrderList = new List<Orders> { };
+            OrderList = new List<Order> { };
         }
 
         public static List<Vendors> GetAll()
@@ -35,6 +35,9 @@ namespace PierresBakery.Models
         {
             return _vendorsList[searchId - 1];
         }
-
+        public void AddOrder(Order order)
+        {
+            OrderList.Add(order);
+        }
     }
 }

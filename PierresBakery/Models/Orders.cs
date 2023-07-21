@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace PierresBakery.Models
 {
-    public class Orders
+    public class Order
     {
         public string OrderTitle { get; set; }
         public string OrderDescription { get; set; }
@@ -12,16 +12,16 @@ namespace PierresBakery.Models
 
         public int Id { get; }
 
-        private static List<Orders> _ordersList = new List<Orders> { };
+        private static List<Order> _orderList = new List<Order> { };
 
-        public Orders(string orderTitle, string orderDescription, decimal orderPrice, string orderDate)
+        public Order(string orderTitle, string orderDescription, decimal orderPrice, string orderDate)
         {
             OrderTitle = orderTitle;
             OrderDescription = orderDescription;
             OrderPrice = orderPrice;
             OrderDate = orderDate;
-            _ordersList.Add(this);
-            Id = _ordersList.Count;
+            _orderList.Add(this);
+            Id = _orderList.Count;
         }
     }
 }
