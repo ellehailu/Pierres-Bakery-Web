@@ -1,13 +1,13 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ToDoList.Models;
+using PierresBakery.Models;
 using System.Collections.Generic;
 using System;
 
-namespace ProjectName.Tests
+namespace PierresBakery.Tests
 {
     [TestClass]
 
-    public class ClassNameTests
+    public class Vendors
     {
 
         [TestMethod]
