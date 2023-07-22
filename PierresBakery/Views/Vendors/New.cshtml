@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My To-Do List!</title>
+    <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
+    <link 
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" 
+      rel="stylesheet" 
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
+      crossorigin="anonymous">
+  </head>
+  <body>
+    <h1>Add a new vendor</h1>
+    
+    <form action="/vendors" method="post">
+        <label for = "vendorName">Vendor name</label>
+        <input type="text" id="vendorName" name="vendorName"><br>
+
+        <label for = "vendorDescription">Vendor description</label>
+        <input type="text" id="vendorDescription" name="vendorDescription"><br>
+
+        <button type="submit">Add vendor</button>
+    </form>
+    <p><a href="/vendors">Look at vendor list</a></p>
+    </body>
+    </html>

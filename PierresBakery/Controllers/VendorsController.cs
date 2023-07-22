@@ -13,5 +13,18 @@ namespace PierresBakery.Controllers
             List<Vendors> allVendors = Vendors.GetAll();
             return View(allVendors);
         }
+
+        [HttpGet("/vendors/new")]
+        public ActionResult New()
+        {
+            return View();
+        }
+
+        [HttpPost("/vendors")]
+        public ActionResult Create(string vendorName, string vendorDescription)
+        {
+            Vendors newVendor = new Vendors(vendorName, vendorDescription);
+            return RedirectToAction("Index");
+        }
     }
 }
