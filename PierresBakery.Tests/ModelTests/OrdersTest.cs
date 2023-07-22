@@ -33,6 +33,19 @@ namespace PierresBakery.Tests
             string orderDate = "07/22/2023";
             Order newOrder = new Order(orderTitle, orderDescription, orderPrice, orderDate);
         }
+
+        [TestMethod]
+        public void GetAll_ReturnOrders_OrderList()
+        {
+            decimal orderPrice1 = 12.99m;
+            decimal orderPrice2 = 24.99m;
+            Order newOrder1 = new Order("weekend order", "Saturday and Sunday Order", orderPrice1, "07/22/2023");
+            Order newOrder2 = new Order("weekeday order", "Monday through friday order", orderPrice2, "07/23/2023");
+            List<Order> newOrderList = new List<Order> { newOrder1, newOrder2 };
+
+            List<Order> result = Order.GetAll();
+            CollectionAssert.AreEqual(result, newOrderList);
+        }
     }
 }
 

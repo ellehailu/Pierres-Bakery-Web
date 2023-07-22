@@ -53,19 +53,19 @@ namespace PierresBakery.Tests
             Assert.AreEqual(newVendor1, result);
         }
 
-        // [TestMethod]
-        // public void AddOrder_AssociatesOrderWithCategory_OrderList()
-        // {
-        //     decimal orderPrice = 12.99m;
-        //     Order newOrder = new Order("orderTitle", "orderDescription", orderPrice, "07/21/2023");
-        //     List<Order> newList = new List<Order> { newOrder };
-        //     Vendors newVendor = new Vendors("IslandBages", "Bagel shop");
-        //     newVendor.AddOrder(newOrder);
+        [TestMethod]
+        public void AddOrder_AssociatesOrderWithCategory_OrderList()
+        {
+            decimal orderPrice = 12.99m;
+            Order newOrder = new Order("orderTitle", "orderDescription", orderPrice, "07/21/2023");
+            List<Order> newList = new List<Order> { newOrder };
+            Vendors newVendor = new Vendors("IslandBages", "Bagel shop");
+            newVendor.AddOrder(newOrder);
 
-        //     List<Order> result = newVendor.Order;
+            List<Order> result = newVendor.Orders;
 
-        //     CollectionAssert.AreEqual(newList, result);
-        // }
+            CollectionAssert.AreEqual(newList, result);
+        }
     }
 }
 //public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()

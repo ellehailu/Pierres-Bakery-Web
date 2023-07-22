@@ -28,5 +28,15 @@ namespace PierresBakery.Models
         {
             _orderList.Clear();
         }
+
+        public static List<Order> GetAll()
+        {
+            return _orderList;
+        }
+
+        public static Order Find(int searchId)
+        {
+            return _orderList[searchId - 1];
+        }
     }
 }
