@@ -23,5 +23,10 @@ namespace PierresBakery.Models
             _orderList.Add(this);
             Id = _orderList.Count;
         }
+
+        public static void ClearAll()
+        {
+            _orderList.Clear();
+        }
     }
 }
