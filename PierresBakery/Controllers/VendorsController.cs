@@ -26,5 +26,11 @@ namespace PierresBakery.Controllers
             Vendors newVendor = new Vendors(vendorName, vendorDescription);
             return RedirectToAction("Index");
         }
+
+        [HttpGet("/vendors/{vendorsId}")]
+        public ActionResult Show()
+        {
+            return View();
+        }
     }
 }

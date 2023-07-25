@@ -10,12 +10,19 @@
       crossorigin="anonymous">
   </head>
   <body>
-    <h1>Order Details: </h1>
+    <body>
+    <h1>Add a new vendor</h1>
+    
+    <form action="/orders" method="post">
+        <label for = "orderName">order name</label>
+        <input type="text" id="orderName" name="orderName"><br>
 
-    <h2>@Model["order"].OrderTitle</h2>
-    <h3>Category: @Model["vendors"].VendorName</h3>
+        <label for = "orderDescription">order description</label>
+        <input type="text" id="orderDescription" name="orderDescription"><br>
 
-    <a href='/vendors/@Model["vendors"].Id/orders/new'>Add another item</a>
-    <a href='/vendors'>View all vendors</a>
+        <button type="submit">Add order</button>
+    </form>
+    <p><a href="/orders">Look at order list</a></p>
+    </body>
   </body>
 </html>
