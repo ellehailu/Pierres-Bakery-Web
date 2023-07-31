@@ -31,7 +31,7 @@ namespace PierresBakery.Controllers
         public ActionResult Show(int vendorId)
         {
             Vendors vendor = Vendors.Find(vendorId);
-            return View(vendor);
+            return View();
         }
     }
 }
