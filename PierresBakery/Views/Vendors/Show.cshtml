@@ -1,15 +1,15 @@
 @using PierresBakery.Models;
-    <h1>Vendor Details: </h1>
+<h1>Vendor Details:</h1>
 
-    <h2>Vendor Name: @Model.VendorName</h2>
-    
-    @if(@Model.Orders.Count == 0){
-        <p>You have no orders from this vendor</p>
-    }
+<h2>Vendor Name: @Model.VendorName</h2>
 
-    @foreach (Order order in @Model.Orders)
-    {
-      <p><a href = "/vendors/@Model.Id/orders/order.Id">@order.OrderTitle</a></p>
-    }
+@if (@Model.Orders.Count == 0)
+{
+  <p>You have no orders from this vendor</p>
+} @foreach (Order order in @Model.Orders)
+{
+  <p><a href="/vendors/@Model.Id/orders/order.Id">@order.OrderTitle</a></p>
+} 
 
-
+@Html.ActionLink("Go back to vendor list", "Index")
+<p><a href='/vendors/@Model.Id/orders/new'>Add a new order</a></p>
