@@ -10,27 +10,27 @@
       crossorigin="anonymous">
   </head>
   <body>
-      @using PierresBakery.Models;
+  @using PierresBakery.Models;
 
     <h1>Orders</h1>
 
-    @if (Model.Count == 0)
-    {
-        <p>There are no orders in the list.</p>
-    }
-    @* List of ordes from vendors *@
+  @if (Model.Count == 0)
+  {
+          <p>There are no orders in the list.</p>
+  }
+  @* List of orders from vendors *@
     <ul>
-        @foreach (Order order in Model)
-        {
-            <li><a href='orders/@order.Id'>@order.OrderDescription</a></li>
-        }
-        
-    </ul>
-    @* List of purchased  *@
-    <a href="/items/new">Add a new item.</a>
+    @foreach (Order order in Model)
+    {
+              <li><a href='orders/@order.Id'>@order.OrderDescription</a></li>
+    }
 
-    <form action ="/items/delete" method="post">
-        <button type="submit" name="button">Clear All Items</button>
+    </ul>
+  @* List of purchased  *@
+    <a href="/orders/new">Add a new item.</a>
+
+    <form action ="/orders/delete" method="post">
+        <button type="submit" name="button">Clear All Orders</button>
     </form>
   </body>
 </html>

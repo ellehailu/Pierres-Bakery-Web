@@ -40,7 +40,7 @@ namespace PierresBakery.Controllers
             Vendors thisVendor = Vendors.Find(vendorId);
             Order newOrder = new Order(orderTitle, orderDescription, orderPrice, orderDate);
             thisVendor.AddOrder(newOrder);
-            return View("Show", thisVendor);
+            return RedirectToAction("Show", "Orders", new { vendorsId = vendorId, orderId = newOrder.Id });
         }
     }
 }

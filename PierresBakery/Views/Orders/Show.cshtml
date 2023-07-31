@@ -1,8 +1,9 @@
 
     <h1>Order Details: </h1>
 
-    <h2>@Model.OrderDescription</h2>
-    <h3>Price: $@Model.OrderPrice</h3>
-    <h3>Date of Order: @Model.OrderDate</h3>
+    <h2>@Model["order"].OrderDescription</h2>
+    @* <h3>Price: $@Model.OrderPrice</h3>
+    <h3>Date of Order: @Model.OrderDate</h3> *@
 
     <a href='/vendors'>View all vendors</a>
+    <a href='/orders'>View all orders</a>
