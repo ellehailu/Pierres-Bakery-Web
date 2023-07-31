@@ -28,9 +28,10 @@ namespace PierresBakery.Controllers
         }
 
         [HttpGet("/vendors/{vendorsId}")]
-        public ActionResult Show()
+        public ActionResult Show(int vendorId)
         {
-            return View();
+            Vendors vendor = Vendors.Find(vendorId);
+            return View(vendor);
         }
     }
 }

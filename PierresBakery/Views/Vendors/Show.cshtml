@@ -1,4 +1,4 @@
-<body>
+@* <body>
     <h1>Vendor Details: </h1>
 
     <h2>@Model["vendors"].VendorDescription</h2>
@@ -7,4 +7,14 @@
     <a href='/vendors/@Model["vendors"].Id/orders/new'>Add another order</a>
     <a href='/vendors'>View all vendors</a>
 
-  </body>
+  </body> *@
+
+  @using PierresBakery.Models;
+
+<h1>Vendor Details: @((Vendors)Model["vendors"]).VendorName</h1>
+
+<h2>@((Vendors)Model["vendors"]).VendorDescription</h2>
+<h3>Order: @((Vendors)Model["Vendor"]).VendorName</h3>
+
+<a href='/vendors/@((Vendors)Model["vendors"]).Id/orders/new'>Add another order</a>
+<a href='/vendors'>View all vendors</a>
