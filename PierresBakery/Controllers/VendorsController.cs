@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using System;
 using Microsoft.AspNetCore.Mvc;
 using PierresBakery.Models;
+
 
 namespace PierresBakery.Controllers
 {
@@ -27,7 +27,7 @@ namespace PierresBakery.Controllers
             return RedirectToAction("Index");
         }
 
-        [HttpGet("/vendors/{vendorsId}")]
+        [HttpGet("/vendors/{vendorId}")]
         public ActionResult Show(int vendorId)
         {
             Vendors vendor = Vendors.Find(vendorId);
