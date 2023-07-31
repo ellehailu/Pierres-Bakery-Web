@@ -36,7 +36,8 @@ namespace PierresBakery.Models
 
         public static Order Find(int searchId)
         {
-            return _orderList[searchId - 1];
+            Order thisOrder = Order._orderList[searchId - 1];
+            return thisOrder;
         }
     }
 }

@@ -6,10 +6,9 @@ namespace PierresBakery.Models
     public class Vendors
     {
 
-
         public string VendorName { get; set; }
         public string VendorDescription { get; set; }
-        public int Id { get; }
+        public int Id { get; set; }
         public List<Order> Orders { get; set; }
         public static List<Vendors> _vendorsList = new List<Vendors> { };
 
@@ -34,7 +33,8 @@ namespace PierresBakery.Models
 
         public static Vendors Find(int searchId)
         {
-            return _vendorsList[searchId - 1];
+            Vendors thisVendor = Vendors._vendorsList[searchId - 1];
+            return thisVendor;
         }
         public void AddOrder(Order newOrder)
         {

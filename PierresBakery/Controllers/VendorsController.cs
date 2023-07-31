@@ -31,7 +31,16 @@ namespace PierresBakery.Controllers
         public ActionResult Show(int vendorId)
         {
             Vendors vendor = Vendors.Find(vendorId);
-            return View();
+            return View(vendor);
+        }
+
+        [HttpPost("/vendors/{vendorId}/orders")]
+        public ActionResult Create(int vendorId, string orderTitle, string orderDescription, decimal orderPrice, string orderDate)
+        {
+            Vendors thisVendor = Vendors.Find(vendorId);
+            Order newOrder = new Order(orderTitle, orderDescription, orderPrice, orderDate);
+            thisVendor.AddOrder(newOrder);
+            return View("Show", thisVendor);
         }
     }
 }

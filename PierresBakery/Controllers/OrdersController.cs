@@ -18,7 +18,7 @@ namespace PierresBakery.Controllers
         public ActionResult Show(int vendorId, int orderId)
         {
             Order order = Order.Find(orderId);
-            Vendors vendor = Vendors.Find(vendorsId);
+            Vendors vendor = Vendors.Find(vendorId);
             Dictionary<string, object> model = new Dictionary<string, object>();
             model.Add("order", order);
             model.Add("vendor s", vendor);
